@@ -4,8 +4,7 @@ import string
 
 
 def index(request):
-    with open('personal_nav\\index.html') as f:
-        return response(f.read(), content_type='text/html')
+    return render(request, 'index.html')
 
 
 def analyze(request):
