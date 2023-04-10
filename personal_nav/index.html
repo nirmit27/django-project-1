@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        header {
+            font-size: 2.2em;
+            font-weight: 600;
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+        }
+
+        #content {
+            font-size: 1.1rem;
+            margin: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            border: 1px solid grey;
+            border-radius: 20px;
+            padding-inline: 70px;
+            padding-block: 30px;
+        }
+
+        #content h3 {
+            align-self: center;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+            padding: 30px;
+            color: white;
+            background-color: rgb(24, 19, 19);
+            width: 100%;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: yellowgreen;
+        }
+
+        footer a:hover {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <header>My First django Project</header>
+    <div id="content">
+        <h3>Features</h3>
+        <br>
+        <a href="/p_nav/pnav">Personal Navigator</a>
+        <a href="/p_nav/text">Text Analyzer</a>
+    </div>
+    <footer>
+        Created with &#128154 by <a href="https://www.linkedin.com/in/nirmit-mishra-0a0b6a224/" target="_blank">Nirmit
+            Mishra</a>.
+    </footer>
+</body>
+
+</html>
