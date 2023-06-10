@@ -17,6 +17,8 @@ def analyze(request):
     # Getting the text
     djtxt = str(request.POST.get('text', 'default text'))
 
+    temp = djtxt
+
     # Checkbox values
     removepunc = str(request.POST.get('removepunc', 'off'))
     allcaps = str(request.POST.get('allcaps', 'off'))
@@ -62,8 +64,13 @@ def analyze(request):
         for x in djtxt:
             if x != ' ':
                 ctr += 1
-        (params['purpose'], params[
-            'analyzed_text']) = ('Number of characters', f'{ctr}')
+
+        if djtxt != temp:
+            (params['purpose'], params[
+                'analyzed_text']) = ('', f'Analyzed Text : {djtxt}\nNumber of Characters : {ctr}')
+        else:
+            (params['purpose'], params['analyzed_text']) = (
+                'Number of Characters', f'{ctr}')
 
     if (chcnt == 'off' and sprem == 'off' and nlrem == 'off' and allsmalls == 'off' and allcaps == 'off' and removepunc == 'off'):
         (params['purpose'], params['analyzed_text']) = (
